@@ -1,0 +1,46 @@
+
+DELETE Commands
+Delete All Rows from a Table
+To delete all rows from a table named your_table_name:
+
+sql:
+DELETE FROM your_table_name;
+Note: This will delete all records in the table. Use with caution.
+-------------------//
+
+Delete Specific Rows Based on a Condition
+To delete rows that meet a specific condition, use the WHERE clause. For example, to delete rows where the column id is equal to 10:
+
+sql: DELETE FROM your_table_name WHERE id = 10;
+
+-----------------//
+
+Delete Multiple Rows Based on a Condition
+To delete multiple rows based on a condition, such as deleting rows where the status column is inactive:
+
+sql: DELETE FROM your_table_name WHERE status = 'inactive';
+
+---------------//-//
+
+Delete Rows with a Limit
+To delete a specific number of rows, use the LIMIT clause. For example, to delete only 5 rows where the status column is inactive:
+
+sql: DELETE FROM your_table_name WHERE status = 'inactive' LIMIT 5;
+
+Example Session in MySQL Workbench
+Open MySQL Workbench and connect to your database.
+
+Select your database from the left panel.
+
+Open a new SQL query tab.
+
+Write your DELETE statement, for example:
+
+sql: DELETE FROM employees WHERE department = 'Sales';
+Execute the query by clicking the "Execute" button.
+
+Important Considerations
+Backup Data: Always ensure you have a backup of your data before performing delete operations, especially when deleting large amounts of data.
+Use Transactions: For critical operations, consider using transactions to ensure that you can roll back changes if something goes wrong.
+Check Affected Rows: After executing a delete command, you can check the number of affected rows to ensure that the correct number of records were deleted.
+By following these steps and examples, you can safely and efficiently delete data from your MySQL tables using MySQL Workbench.
